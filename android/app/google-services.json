@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "817940784403",
+    "project_id": "travel-app-beb08",
+    "storage_bucket": "travel-app-beb08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817940784403:android:06be04df2afbd2cdc9e6e6",
+        "android_client_info": {
+          "package_name": "com.travel_app.travel_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "817940784403-0osppseplo06466dd12pidh10gil207c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.travel_app.travel_app",
+            "certificate_hash": "75ad6cffe166196c03f08d812af7459542d29db1"
+          }
+        },
+        {
+          "client_id": "817940784403-nma7bus6otfbv38c23qnrhv39hou8432.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0_-PmlcGq7BFLPLfoutRpkjRqqcHb3KA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "817940784403-a3a57odgsspjdgl306jk19pltaev8nvo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "817940784403-9cbq1bvm1gsevcioe0frfs3kktetca8c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.travelapp.travelApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
