@@ -18,16 +18,15 @@ class _HomePageState extends State<HomePage> {
       TextEditingController(text: "");
   FocusNode searchTextFieldFocusNode = FocusNode();
   static const List<String> sampleImages = [
-    "https://images.unsplash.com/photo-1557700836-25f2464e845d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
-    "https://images.unsplash.com/photo-1669462277329-f32f928a4a79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-    "https://images.unsplash.com/photo-1542840410-3092f99611a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-    "https://images.unsplash.com/photo-1557700836-25f2464e845d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
-    "https://images.unsplash.com/photo-1669462277329-f32f928a4a79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-    "https://images.unsplash.com/photo-1557700836-25f2464e845d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
-    "https://images.unsplash.com/photo-1669462277329-f32f928a4a79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-    "https://images.unsplash.com/photo-1557700836-25f2464e845d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
-    "https://images.unsplash.com/photo-1669462277329-f32f928a4a79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-    "https://images.unsplash.com/photo-1669462277329-f32f928a4a79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+    "assets/images/places/hanuman_temple.jpg",
+    "assets/images/places/madkai_bridge.jpg",
+    "assets/images/places/mahalaxmi_temple.jpg",
+    "assets/images/places/mangeshi_temple.jpg",
+    "assets/images/places/sangam_bakery.jpg",
+    "assets/images/places/shantadurga_temple.jpg",
+    "assets/images/places/st_roque_chapel.jpg",
+    "assets/images/places/st_ana_bakery.jpg",
+    "assets/images/places/temp2_min.jpg",
   ];
 
   @override
@@ -129,13 +128,14 @@ class _HomePageState extends State<HomePage> {
                             focusNode: searchTextFieldFocusNode,
                             controller: searchTextEditingController,
                             decoration: const InputDecoration(
-                                prefixIcon: Icon(Icons.search),
-                                border: OutlineInputBorder(),
-                                fillColor: Colors.white,
-                                focusColor: Colors.black,
-                                filled: true,
-                                contentPadding: EdgeInsets.all(0),
-                                hintText: "Search"),
+                              prefixIcon: Icon(Icons.search),
+                              border: OutlineInputBorder(),
+                              fillColor: Colors.white,
+                              focusColor: Colors.black,
+                              filled: true,
+                              contentPadding: EdgeInsets.all(0),
+                              hintText: "Search",
+                            ),
                           ),
                         ),
                         const SizedBox(
@@ -152,30 +152,11 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(200),
-                                    child: Image.network(
+                                    child: Image.asset(
                                       sampleImages[index],
-                                      height: 125,
                                       width: 125,
+                                      height: 125,
                                       fit: BoxFit.cover,
-                                      loadingBuilder: (BuildContext context,
-                                          Widget child,
-                                          ImageChunkEvent? loadingProgress) {
-                                        if (loadingProgress == null) {
-                                          return child;
-                                        }
-                                        return Center(
-                                          child: CircularProgressIndicator(
-                                            value: loadingProgress
-                                                        .expectedTotalBytes !=
-                                                    null
-                                                ? loadingProgress
-                                                        .cumulativeBytesLoaded /
-                                                    loadingProgress
-                                                        .expectedTotalBytes!
-                                                : null,
-                                          ),
-                                        );
-                                      },
                                     ),
                                   ),
                                   const SizedBox(
@@ -240,23 +221,11 @@ class _HomePageState extends State<HomePage> {
                 itemBuilder: (BuildContext context, int index) {
                   return ClipRRect(
                     borderRadius: BorderRadius.circular(125),
-                    child: Image.network(
+                    child: Image.asset(
                       sampleImages[index],
-                      height: 125,
                       width: 125,
+                      height: 125,
                       fit: BoxFit.cover,
-                      loadingBuilder: (BuildContext context, Widget child,
-                          ImageChunkEvent? loadingProgress) {
-                        if (loadingProgress == null) return child;
-                        return Center(
-                          child: CircularProgressIndicator(
-                            value: loadingProgress.expectedTotalBytes != null
-                                ? loadingProgress.cumulativeBytesLoaded /
-                                    loadingProgress.expectedTotalBytes!
-                                : null,
-                          ),
-                        );
-                      },
                     ),
                   );
                 },

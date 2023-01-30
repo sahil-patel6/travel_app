@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:travel_app/Screens/homepage.dart';
+import 'homepage.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
